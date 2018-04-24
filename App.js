@@ -1,21 +1,24 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { Image } from 'react-native';
+import { Container, Header, View, DeckSwiper, Card, CardItem, Thumbnail, Text, Left, Body, Icon } from 'native-base';
+import Deck from './DeckSwiper';
+import Color from './SomeNewClass';
 
-export default class App extends React.Component {
+const cards = [
+  {
+    text: 'Card One',
+    name: 'One',
+    image: require('./assets/Mad-Max-Fury-Road-2015-4K-Wallpaper.jpg'),
+  }
+];
+export default class DeckSwiperExample extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <Container>
+        <Header />
+        <Deck />
+        <Color />
+      </Container>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
